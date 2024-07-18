@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Thư Viện BB & BD</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Trang Chủ</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                    <div class="card-body">Tổng số độc giả</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <p>@Model.TongSoDocGia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                    <div class="card-body">Tổng số sách</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <p>@Model.TongSoSach</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                    <div class="card-body">Tổng phiếu mượn</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <p>@Model.TongSoMuonTra</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                    <div class="card-body">Tổng số nhân viên</div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <p>@Model.TongSoNhanVien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*@foreach (var sach in Model.DanhSachSach)
+            {
+                <ui class="sachs">
+                    <li>
+                        <div class="=sachs-item">
+                            <div class="top">
+                                <a>
+
+                                </a>
+                            </div>
+                            <div class="sachs-infor">
+                                <a>@sach.TenSach</a>
+
+                            </div>
+
+                        </div>
+                    </li>
+                </ui>
+            }*@
+        @*body thông tin sách*@
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i>
+                Danh sách sách hiện tại:
+                <div class="container-fluid">
+                    <div class="row">
+                        @*giá trị sách k được null*@
+                        @foreach (var sach in Model.DanhSachSach)
+                        {
+                            <div class="col-sm-6 col-md-4 col-lg-3 ">
+                                <div class="div-img-client">
+                                        <img src="@Url.Content(sach.HinhAnh)" border="4" height="150" width="110" />
+                                </div>
+                                <div>
+                                    <a>@sach.TenSach</a>
+                                    <div>
+                                        <tr>
+                                            <th>Tác giả:</th>
+                                            <th>@sach.TacGia.TenTacGia</th>
+                                        </tr>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>

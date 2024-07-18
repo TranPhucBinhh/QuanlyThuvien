@@ -1,0 +1,50 @@
+﻿@model QuanlyThuvien.Models.ChiTietPhieuMuonTra
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Trả sách</h2>
+/
+<h3>Bạn có chắc độc giả đã trả phiếu mượn này? </h3>
+<div>
+    <h4>Chi tiết phiếu mượn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaChiTiet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaChiTiet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MuonTra.MaMuonTra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MuonTra.MaMuonTra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sach.TenSach)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sach.TenSach)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.So_Luong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.So_Luong)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Trả" class="btn btn-danger" /> |
+            @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
+

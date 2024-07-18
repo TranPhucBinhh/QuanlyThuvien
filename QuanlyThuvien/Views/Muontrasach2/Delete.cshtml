@@ -1,0 +1,56 @@
+﻿@model QuanlyThuvien.Models.MuonTra
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Xóa phiếu mượn trả</h2>
+
+<h3>Bạn có chắc chắn muốn xóa phiếu mượn trả này không?</h3>
+<div>
+    <h4>Phiếu mượn trả</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaMuonTra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaMuonTra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocGia.HoTen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocGia.HoTen)
+        </dd>
+        <dt>
+            @*@Html.DisplayNameFor(model => model.NgayMuon)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuon)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NgayTra)*@
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+

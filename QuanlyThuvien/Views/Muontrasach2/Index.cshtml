@@ -1,0 +1,42 @@
+﻿@model IEnumerable<QuanlyThuvien.Models.MuonTra>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Danh sách phiếu mượn trả</h2>
+<p>
+    @Html.ActionLink("Thêm phiếu mượn", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã phiếu mượn</th>
+            <th>Độc giả</th>
+            <th>Ghi chú</th>
+            @*<th>Ngày trả</th>
+                <th>Ghi chú</th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaMuonTra</td>
+                <td>@item.DocGia.HoTen</td>
+                @*<td>@item.NgayMuon</td>
+                    <td>@item.NgayTra.</td>*@
+                <td>@item.TinhTrang</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaMuonTra }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaMuonTra }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaMuonTra })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Chi tiết phiếu", "Index", "Chitietphieumuon");

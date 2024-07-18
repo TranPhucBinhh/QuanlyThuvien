@@ -1,0 +1,39 @@
+﻿@model QuanlyThuvien.Models.TimKiemSach
+
+@{
+    ViewBag.Title = "TimKiemSach";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>TimKiemSach</h2>
+@using (Html.BeginForm("TimKiemSach", "Sach", FormMethod.Get))
+{
+    <p>
+        @Html.TextBox("keyword", Model.Keyword)
+        <input type="submit" value="Tìm Kiếm" />
+    </p>
+    @Html.ActionLink("Quay lại", "Index")
+}
+
+
+@if (Model.Results != null && Model.Results.Any())
+{
+    <h3>Kết quả</h3>
+    <ul>
+        @foreach (var sach in Model.Results)
+        {
+            <li>Tên sách: @sach.TenSach</li>
+            <li>Tác giả: @sach.TacGia.TenTacGia</li>
+            <li>Số lượng: @sach.SoLuong</li>
+            <li>Năm xuất bản: @sach.NamXuatBan</li>
+            <div class="div-img-client">
+                <img src="@Url.Content(sach.HinhAnh)" height="150" width="120" />
+            </div>
+        }
+    </ul>
+}
+else if (!string.IsNullOrEmpty(Model.Keyword))
+{
+    <p>Không tìm thấy sách.</p>
+}
+

@@ -1,0 +1,50 @@
+﻿@model QuanlyThuvien.Models.MuonTra
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Chi tiết phiếu mượn trả</h2>
+
+<div>
+    <h4>Phiếu mượn trả</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaMuonTra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaMuonTra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DocGia.HoTen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DocGia.HoTen)
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.NgayMuon)
+        </dt>   
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuon)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NgayTra)*@
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMuonTra }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanlyThuvien.Models.TacGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Quản lý tác giả</h2>
+
+<p>
+    @Html.ActionLink("Thêm tác giả", "Them")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaTacGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenTacGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuocTich)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaTacGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenTacGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuocTich)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MaTacGia  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.MaTacGia  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaTacGia  })
+        </td>
+    </tr>
+}
+
+</table>

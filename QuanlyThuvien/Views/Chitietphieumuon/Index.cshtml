@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QuanlyThuvien.Models.ChiTietPhieuMuonTra>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutchung.cshtml";
+}
+
+<h2>Danh sách chi tiết phiếu mượn</h2>
+
+<p>
+    @Html.ActionLink("Thêm phiếu", "Create")
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaChiTiet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MuonTra.MaMuonTra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MuonTra.DocGia.HoTen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sach.TenSach)
+            </th>
+            <th>Ngày mượn</th>
+            <th>Ngày trả</th>
+            <th>
+            @Html.DisplayNameFor(model => model.So_Luong)
+        </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaChiTiet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MuonTra.MaMuonTra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MuonTra.DocGia.HoTen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sach.TenSach)
+                </td>
+                <td>@item.NgayMuon</td>
+                <td>@item.NgayTra.</td>
+                <td>
+            @Html.DisplayFor(modelItem => item.So_Luong)
+        </td>
+                <td>
+                    @Html.ActionLink("Gia hạn thêm", "Edit", new { id = item.MaChiTiet }, new { @class = "btn btn-info" }) |    
+                    @Html.ActionLink("Trả sách", "Delete", new { id = item.MaChiTiet }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Quay lại", "Index","Muontrasach2")
