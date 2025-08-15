@@ -7,23 +7,6 @@
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-inactive)
 
----
-### Tổng quan (Gallery)
-<p align="center">
-  <img src="./hinhanh/TrangChu.jpg" alt="Trang chủ" width="32%" />
-  <img src="./hinhanh/QuanLySach.jpg" alt="Quản lý sách" width="32%" />
-  <img src="./hinhanh/MuonTra.jpg" alt="Mượn/Trả" width="32%" />
-</p>
-
-### Chi tiết từng màn hình
-**Trang chủ**  
-![Trang chủ](./hinhanh/TrangChu.jpg)
-
-**Quản lý sách**  
-![Quản lý sách](./hinhanh/QuanLySach.jpg)
-
-**Mượn/Trả**  
-![Mượn/Trả](./hinhanh/MuonTra.jpg)
 
 ## ✨ Tính năng chính (gợi ý)
 - [ ] **Quản lý sách** (ISBN, tiêu đề, thể loại, tác giả, NXB, số lượng)
