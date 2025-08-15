@@ -26,40 +26,6 @@
 - **UI**: Razor Views, Bootstrap/Tailwind, jQuery/Alpine
 - **Auth**: ASP.NET Identity / Cookie Auth / OpenID Connect
 
-### Cấu trúc thư mục
-**Phương án A — ASP.NET Core MVC (.NET 8+)**
-
-src/
-├─ WebApp/               # ASP.NET Core MVC (UI)
-│  ├─ Controllers/
-│  ├─ Views/
-│  ├─ Models/            # ViewModels/DTOs
-│  ├─ wwwroot/           # css, js, images
-│  ├─ appsettings.json
-│  └─ Program.cs
-├─ Application/          # Services, UseCases, Validation
-├─ Domain/               # Entities: Book, Reader, Loan, Fine...
-├─ Infrastructure/       # EF Core, Repositories, Migrations
-└─ tests/
-   └─ WebApp.Tests/      # xUnit/NUnit
-```
-
-**Phương án B — ASP.NET MVC 5 
-```
-src/
-├─ WebApp/               
-│  ├─ Controllers/
-│  ├─ Views/
-│  ├─ Models/            
-│  ├─ Content/           # css
-│  ├─ Scripts/           # js
-│  ├─ web.config
-│  └─ Global.asax
-└─ tests/
-   └─ WebApp.Tests/
-```
-
----
 
 ##  Yêu cầu hệ thống
 **ASP.NET Core MVC:**
@@ -75,26 +41,6 @@ src/
 ---
 
 ##  Cài đặt & Chạy (local)
-
-### Phương án A — ASP.NET Core MVC
-```bash
-# 1) Khôi phục package
-dotnet restore
-
-# 2) Cấu hình kết nối CSDL
-cp src/WebApp/appsettings.Development.json.example src/WebApp/appsettings.Development.json
-# chỉnh "ConnectionStrings:DefaultConnection"
-
-# 3) Tạo/migrate database (EF Core)
-dotnet tool update -g dotnet-ef
-dotnet ef database update --project src/Infrastructure --startup-project src/WebApp
-
-# 4) Chạy ứng dụng
-dotnet run --project src/WebApp
-
-# 5) Build bản release
-dotnet publish src/WebApp -c Release -o publish
-```
 
 **Mẫu `appsettings.json`:**
 ```json
@@ -149,7 +95,6 @@ Add-Migration Init
 Update-Database
 ```
 
----
 
 ## 🧪 Kiểm thử
 ```bash
