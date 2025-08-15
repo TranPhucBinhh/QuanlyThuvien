@@ -10,20 +10,20 @@
 ---
 ### Tổng quan (Gallery)
 <p align="center">
-  <img src="TrangChu.jpg" alt="Trang chủ" width="30%" />
-  <img src="./docs/screenshots/books.png" alt="Quản lý sách" width="30%" />
-  <img src="./docs/screenshots/borrow-return.png" alt="Mượn trả" width="30%" />
+  <img src="./hinhanh/TrangChu.jpg" alt="Trang chủ" width="32%" />
+  <img src="./hinhanh/QuanLySach.jpg" alt="Quản lý sách" width="32%" />
+  <img src="./hinhanh/MuonTra.jpg" alt="Mượn/Trả" width="32%" />
 </p>
 
 ### Chi tiết từng màn hình
 **Trang chủ**  
-![Trang chủ](./docs/screenshots/homepage.png)
+![Trang chủ](./hinhanh/TrangChu.jpg)
 
 **Quản lý sách**  
-![Quản lý sách](./docs/screenshots/books.png)
+![Quản lý sách](./hinhanh/QuanLySach.jpg)
 
-**Mượn/Trả & phạt**  
-![Mượn trả](./docs/screenshots/borrow-return.png)
+**Mượn/Trả**  
+![Mượn/Trả](./hinhanh/MuonTra.jpg)
 
 ## ✨ Tính năng chính (gợi ý)
 - [ ] **Quản lý sách** (ISBN, tiêu đề, thể loại, tác giả, NXB, số lượng)
