@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/badge/license-MIT-inactive)
 
 
-## ✨ Tính năng chính (gợi ý)
+## ✨ Tính năng chính
 - [ ] **Quản lý sách** (ISBN, tiêu đề, thể loại, tác giả, NXB, số lượng)
 - [ ] **Quản lý độc giả** (thông tin, thẻ thư viện, trạng thái)
 - [ ] **Mượn/Trả** (ngày mượn, hạn trả, gia hạn, trả quá hạn)
@@ -28,6 +28,7 @@
 
 ### Cấu trúc thư mục
 **Phương án A — ASP.NET Core MVC (.NET 8+)**
+
 src/
 ├─ WebApp/               # ASP.NET Core MVC (UI)
 │  ├─ Controllers/
