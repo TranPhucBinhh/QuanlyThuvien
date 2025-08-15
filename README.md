@@ -8,14 +8,9 @@
 ![License](https://img.shields.io/badge/license-MIT-inactive)
 
 ---
-
-
-## 🖼️ Ảnh chụp màn hình
-Đặt ảnh thật của dự án vào thư mục `docs/screenshots/` với tên không dấu để đường dẫn gọn gàng.
-
 ### Tổng quan (Gallery)
 <p align="center">
-  <img src="./docs/screenshots/homepage.png" alt="Trang chủ" width="30%" />
+  <img src="TrangChu.jpg" alt="Trang chủ" width="30%" />
   <img src="./docs/screenshots/books.png" alt="Quản lý sách" width="30%" />
   <img src="./docs/screenshots/borrow-return.png" alt="Mượn trả" width="30%" />
 </p>
@@ -29,20 +24,6 @@
 
 **Mượn/Trả & phạt**  
 ![Mượn trả](./docs/screenshots/borrow-return.png)
-
-<details>
-  <summary>Ảnh bổ sung</summary>
-
-  - ![Độc giả](./docs/screenshots/readers.png)
-  - ![Tác giả/NXB](./docs/screenshots/authors-publishers.png)
-  - ![Báo cáo](./docs/screenshots/reports.png)
-  - ![Phân quyền](./docs/screenshots/roles.png)
-
-</details>
-
-> 💡 Mẹo chụp ảnh: đặt width 1440px, ẩn thanh bookmark, `⌘/Ctrl + Shift + P` → **Capture full size screenshot** để chụp toàn trang.
-
----
 
 ## ✨ Tính năng chính (gợi ý)
 - [ ] **Quản lý sách** (ISBN, tiêu đề, thể loại, tác giả, NXB, số lượng)
