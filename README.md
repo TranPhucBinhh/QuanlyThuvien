@@ -179,5 +179,4 @@ ENTRYPOINT ["dotnet", "WebApp.dll"]
 
 ## 📬 Liên hệ
 - Tác giả: Trần Phúc Bình
-- Facebook: https://facebook.com/phuc.binh.2402
 - Email: tranphucbinh201@gmail.com
